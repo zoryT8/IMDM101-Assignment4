@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public float constantRunSpeed = 10;
     public float lateralSpeed = 10;
-    public float jumpSpeed = 7.5F;
+    private float jumpSpeed = 5.0F;
     public GameObject loseText;
     private Rigidbody rb;
     private float movementX;
