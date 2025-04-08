@@ -1,6 +1,7 @@
 using System;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class CarController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName.equals("Level1 - Easy")) {
+        String sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName.Equals("Level1 - Easy")) {
             drivingSpeed = new System.Random().Next(1, 10);
-        } else if (sceneName.equals("Level2 - Medium")) {
+        } else if (sceneName.Equals("Level2 - Medium")) {
+            drivingSpeed = new System.Random().Next(30, 60);
+        } else if (sceneName.Equals("Level3 - Hard")) {
             drivingSpeed = new System.Random().Next(30, 60);
         }
     }
