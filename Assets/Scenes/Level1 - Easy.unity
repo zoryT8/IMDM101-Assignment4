@@ -2225,6 +2225,13 @@ Transform:
   - {fileID: 1828404001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423376729}
+  serializedVersion: 4
 --- !u!1 &1635016107
 GameObject:
   m_ObjectHideFlags: 0

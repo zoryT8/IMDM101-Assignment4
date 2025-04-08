@@ -13,7 +13,12 @@ public class CarController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        drivingSpeed = new System.Random().Next(1, 10);
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName.equals("Level1 - Easy")) {
+            drivingSpeed = new System.Random().Next(1, 10);
+        } else if (sceneName.equals("Level2 - Medium")) {
+            drivingSpeed = new System.Random().Next(30, 60);
+        }
     }
 
     void FixedUpdate()
