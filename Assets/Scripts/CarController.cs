@@ -13,7 +13,7 @@ public class CarController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        drivingSpeed = new System.Random().Next(1, 10);
+        drivingSpeed = new System.Random().Next(30, 60);
     }
 
     void FixedUpdate()
