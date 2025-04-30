@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private float movementX;
     private float movementY;
-    private Boolean gameOver;
+    public static Boolean gameOver;
     private Boolean onGround;
     private int currentLevel;
     private static String[] levels = {"Level1 - Easy", "Level2 - Medium", "Level3 - Hard"};
@@ -56,16 +57,17 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(movementX * lateralSpeed, 0.0F, 0.0F);
 
             if(Input.GetKey(KeyCode.Space) && onGround){
-                rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpSpeed, rb.linearVelocity.z);
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpSpeed, 0);
                 onGround = false;
             }
+            StreetMover.speed += 0.01F;
         }
     }
 
     void LateUpdate()
     {
         if (!gameOver) {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y, constantRunSpeed);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y, 0);
         }
     }
 
@@ -87,15 +89,8 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("LevelEnd") && !gameOver) {
-            if (currentLevel < levels.Length - 1) {
-                SceneManager.LoadScene(levels[currentLevel + 1]);
-                currentLevel += 1;
-            } else {
-                winText.gameObject.SetActive(true);
-                Destroy(GameObject.FindGameObjectWithTag("Player"));
-                gameOver = true;
-            }
+        if (!gameOver) {
+            WorldGenerator.generateNewStreet();
         }
     }
 

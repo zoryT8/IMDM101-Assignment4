@@ -6,8 +6,8 @@ public class CarController : MonoBehaviour
 {
 
     private float drivingSpeed;
+    
     private Rigidbody rb;
-    public Boolean isDrivingTowards = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,7 @@ public class CarController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         String sceneName = SceneManager.GetActiveScene().name;
         if (sceneName.Equals("Level1 - Easy")) {
-            drivingSpeed = new System.Random().Next(1, 10);
+            drivingSpeed = new System.Random().Next(0, 10);
         } else if (sceneName.Equals("Level2 - Medium")) {
             drivingSpeed = new System.Random().Next(30, 60);
         } else if (sceneName.Equals("Level3 - Hard")) {
@@ -25,11 +25,17 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDrivingTowards) {
-            rb.linearVelocity = new Vector3(0, 0, -drivingSpeed);
-        } else {
-            rb.linearVelocity = new Vector3(0, 0, drivingSpeed);
+        rb.linearVelocity = new Vector3(0, 0, -(drivingSpeed + StreetMover.speed));
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("TriggerNewCar")) {
+            int randomDisplacement = new System.Random().Next(-5, 5);
+            GameObject newCar = Instantiate(gameObject, gameObject.transform.position + 
+                new Vector3(0, 0, WorldGenerator.distanceToNextStreet + randomDisplacement), Quaternion.identity);
+            newCar.transform.Rotate(0, 180, 0);
+            Destroy(gameObject);
         }
-        
     }
 }

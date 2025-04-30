@@ -199,12 +199,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142439182}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.75, y: 2.33, z: 147.85}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.7324376, y: 3.5572762, z: 13.752731}
   m_LocalScale: {x: 0.2, y: 4, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1423376730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &142439186
 BoxCollider:
@@ -321,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -710256169865633756, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -705035292477877469, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e, type: 3}
       propertyPath: m_Name
-      value: Van
+      value: Van1
       objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e, type: 3}
       propertyPath: m_TagString
@@ -1121,6 +1121,7 @@ MonoBehaviour:
   constantRunSpeed: 10
   lateralSpeed: 10
   loseText: {fileID: 849075096}
+  winText: {fileID: 0}
 --- !u!54 &664022021
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1161,8 +1162,8 @@ GameObject:
   - component: {fileID: 673315973}
   - component: {fileID: 673315972}
   m_Layer: 0
-  m_Name: LevelEnd
-  m_TagString: LevelEnd
+  m_Name: TriggerNewStreet
+  m_TagString: TriggerNewStreet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1195,7 +1196,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673315971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1249,12 +1250,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673315971}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.009648083, y: 2.42, z: 194.32}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.9727895, y: 3.6472764, z: -15.497276}
   m_LocalScale: {x: 3.36, y: 5.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1423376730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &779637976
 GameObject:
@@ -1357,12 +1358,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779637976}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 2.33, z: 147.85}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2324376, y: 3.5572762, z: 13.752731}
   m_LocalScale: {x: 0.2, y: 4, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1423376730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
@@ -1580,7 +1581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9557ba868d76d9945894b975f6800cf7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9557ba868d76d9945894b975f6800cf7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1752,7 +1753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -710256169865633756, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -705035292477877469, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
@@ -1906,7 +1907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9189002782948893723, guid: bf49b486ffae2c2429b4fd41e96023c3, type: 3}
       propertyPath: m_Name
-      value: Truck
+      value: Truck1
       objectReference: {fileID: 0}
     - target: {fileID: 9189002782948893723, guid: bf49b486ffae2c2429b4fd41e96023c3, type: 3}
       propertyPath: m_TagString
@@ -2020,7 +2021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -710256169865633756, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -705035292477877469, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
@@ -2174,7 +2175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14, type: 3}
       propertyPath: m_Name
-      value: Taxi
+      value: Taxi1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2199,8 +2200,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423376730}
+  - component: {fileID: 1423376732}
+  - component: {fileID: 1423376733}
   m_Layer: 0
-  m_Name: Street
+  m_Name: Street1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2223,15 +2226,44 @@ Transform:
   - {fileID: 954110933}
   - {fileID: 2055981864}
   - {fileID: 1828404001}
+  - {fileID: 673315975}
+  - {fileID: 142439185}
+  - {fileID: 779637980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-Rigidbody:
+--- !u!114 &1423376732
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423376729}
-  serializedVersion: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980f0fd60575e2e4b86504eacc5b0c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1423376733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423376729}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1635016107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,7 +2544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452039197999972492, guid: 813df9801c30e63479934f054db68d12, type: 3}
       propertyPath: m_Name
-      value: Police
+      value: Police1
       objectReference: {fileID: 0}
     - target: {fileID: 6452039197999972492, guid: 813df9801c30e63479934f054db68d12, type: 3}
       propertyPath: m_TagString
@@ -2594,7 +2626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7769690492283750692, guid: f40e52a0c26735a46b681671fb2baa40, type: 3}
       propertyPath: m_Name
-      value: Hatchback
+      value: Hatchback1
       objectReference: {fileID: 0}
     - target: {fileID: 7769690492283750692, guid: f40e52a0c26735a46b681671fb2baa40, type: 3}
       propertyPath: m_TagString
@@ -2708,7 +2740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -710256169865633756, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -705035292477877469, guid: 531f65d55c9539045a8f8a0ca112a122, type: 3}
       propertyPath: m_Convex
@@ -2867,7 +2899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8663673574762740106, guid: 3f83a5a9639ce0249ac0d7df9b8c40b9, type: 3}
       propertyPath: m_Name
-      value: Pickup
+      value: Pickup1
       objectReference: {fileID: 0}
     - target: {fileID: 8663673574762740106, guid: 3f83a5a9639ce0249ac0d7df9b8c40b9, type: 3}
       propertyPath: m_TagString
@@ -2997,9 +3029,6 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 942093300}
   - {fileID: 1423376730}
-  - {fileID: 142439185}
-  - {fileID: 779637980}
-  - {fileID: 673315975}
   - {fileID: 1958179702}
   - {fileID: 237055515}
   - {fileID: 1894283154}
