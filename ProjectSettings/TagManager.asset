@@ -8,6 +8,8 @@ TagManager:
   - Car
   - LevelEnd
   - TriggerNewStreet
+  - TriggerNewCar
+  - Plane
   layers:
   - Default
   - TransparentFX

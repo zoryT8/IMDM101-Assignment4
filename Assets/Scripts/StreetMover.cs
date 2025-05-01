@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class StreetMover : MonoBehaviour
 {
@@ -10,7 +11,17 @@ public class StreetMover : MonoBehaviour
 // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        String sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName.Equals("Level1 - Easy")) {
+            WorldGenerator.distanceToNextStreet = 90;
+            speed = 10;
+        } else if (sceneName.Equals("Level2 - Medium")) {
+            WorldGenerator.distanceToNextStreet = 250;
+            speed = 20;
+        } else if (sceneName.Equals("Level3 - Hard")) {
+            WorldGenerator.distanceToNextStreet = 460;
+            speed = 50;
+        }
     }
 
     void Update()

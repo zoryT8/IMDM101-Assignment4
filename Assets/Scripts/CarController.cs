@@ -17,9 +17,9 @@ public class CarController : MonoBehaviour
         if (sceneName.Equals("Level1 - Easy")) {
             drivingSpeed = new System.Random().Next(0, 10);
         } else if (sceneName.Equals("Level2 - Medium")) {
-            drivingSpeed = new System.Random().Next(30, 60);
+            drivingSpeed = new System.Random().Next(5, 15);
         } else if (sceneName.Equals("Level3 - Hard")) {
-            drivingSpeed = new System.Random().Next(30, 60);
+            drivingSpeed = new System.Random().Next(30, 50);
         }
     }
 
@@ -32,9 +32,15 @@ public class CarController : MonoBehaviour
     {
         if (other.CompareTag("TriggerNewCar")) {
             int randomDisplacement = new System.Random().Next(-5, 5);
-            GameObject newCar = Instantiate(gameObject, gameObject.transform.position + 
-                new Vector3(0, 0, WorldGenerator.distanceToNextStreet + randomDisplacement), Quaternion.identity);
-            newCar.transform.Rotate(0, 180, 0);
+            if (CompareTag("Plane")) {
+                GameObject newPlane = Instantiate(gameObject, gameObject.transform.position + 
+                    new Vector3(0, 0, WorldGenerator.distanceToNextStreet + randomDisplacement), Quaternion.identity);
+                newPlane.transform.Rotate(270, 90, 0);
+            } else {
+                GameObject newCar = Instantiate(gameObject, gameObject.transform.position + 
+                    new Vector3(0, 0, WorldGenerator.distanceToNextStreet + randomDisplacement), Quaternion.identity);
+                newCar.transform.Rotate(0, 180, 0);
+            }
             Destroy(gameObject);
         }
     }

@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     public static Boolean gameOver;
     private Boolean onGround;
     private int currentLevel;
-    private static String[] levels = {"Level1 - Easy", "Level2 - Medium", "Level3 - Hard"};
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
