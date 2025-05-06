@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public AudioClip loseSound;
+    private AudioSource audioSource;
     public float constantRunSpeed = 10;
     public float lateralSpeed = 10;
     private float jumpSpeed;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         loseText.SetActive(false);
         gameOver = false;
+        audioSource = GetComponent<AudioSource>();
         onGround = true;
         score = 0;
         WorldGenerator.startingCarRotation = GameObject.Find("Van").transform.rotation;
@@ -81,7 +83,10 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Car")) {
-            Destroy(GameObject.FindGameObjectWithTag("Player"));
+            if (loseSound != null && audioSource != null) {
+            audioSource.PlayOneShot(loseSound);
+        }
+            Destroy(GameObject.FindGameObjectWithTag("Player"), loseSound != null ? loseSound.length : 0);
             loseText.gameObject.SetActive(true);
             gameOver = true;
         }
