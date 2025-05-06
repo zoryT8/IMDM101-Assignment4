@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         onGround = true;
         score = 0;
+        WorldGenerator.startingCarRotation = GameObject.Find("Van").transform.rotation;
+        WorldGenerator.startingCarY = GameObject.Find("Van").transform.position.y;
         String sceneName = SceneManager.GetActiveScene().name;
         if (sceneName.Equals("Level1 - Easy")) {
             currentLevel = 0;
@@ -82,8 +84,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Car")) {
             if (loseSound != null && audioSource != null) {
-            audioSource.PlayOneShot(loseSound);
-        }
+                audioSource.PlayOneShot(loseSound);
+            }
+
+            Destroy(GameObject.Find("Particle System"));
             Destroy(GameObject.FindGameObjectWithTag("Player"), loseSound != null ? loseSound.length : 0);
             loseText.gameObject.SetActive(true);
             gameOver = true;
