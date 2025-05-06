@@ -12,13 +12,14 @@ public class PlayerController : MonoBehaviour
     public float lateralSpeed = 10;
     private float jumpSpeed;
     public GameObject loseText;
-    public GameObject winText;
+    public TextMeshProUGUI scoreText;
     private Rigidbody rb;
     private float movementX;
     private float movementY;
     public static Boolean gameOver;
     private Boolean onGround;
     private int currentLevel;
+    private int score;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         loseText.SetActive(false);
         gameOver = false;
         onGround = true;
+        score = 0;
         String sceneName = SceneManager.GetActiveScene().name;
         if (sceneName.Equals("Level1 - Easy")) {
             currentLevel = 0;
@@ -38,9 +40,13 @@ public class PlayerController : MonoBehaviour
             currentLevel = 2;
             jumpSpeed = 7.5F;
         }
+    }
 
-        if (winText != null) {
-            winText.SetActive(false);
+    void Update()
+    {
+        if (!gameOver) {
+            scoreText.SetText("Score: " + score);
+            score++;
         }
     }
 
