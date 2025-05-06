@@ -8,6 +8,8 @@ public class WorldGenerator : MonoBehaviour
     public static GameObject street = GameObject.Find("Street1");
 
     public static int distanceToNextStreet = 90;
+    public static float startingCarY;
+    public static Quaternion startingCarRotation;
     static int counter = 1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

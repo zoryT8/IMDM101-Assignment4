@@ -6,7 +6,6 @@ public class CarController : MonoBehaviour
 {
 
     private float drivingSpeed;
-    
     private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,8 +37,8 @@ public class CarController : MonoBehaviour
                 newPlane.transform.Rotate(270, 90, 0);
             } else {
                 GameObject newCar = Instantiate(gameObject, gameObject.transform.position + 
-                    new Vector3(0, 0, WorldGenerator.distanceToNextStreet + randomDisplacement), Quaternion.identity);
-                newCar.transform.Rotate(0, 180, 0);
+                    new Vector3(0, 0, WorldGenerator.distanceToNextStreet + randomDisplacement), WorldGenerator.startingCarRotation);
+                newCar.transform.position = new Vector3(newCar.transform.position.x, WorldGenerator.startingCarY, newCar.transform.position.z);
             }
             Destroy(gameObject);
         }
