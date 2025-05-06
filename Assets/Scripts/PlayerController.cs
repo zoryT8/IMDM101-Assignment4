@@ -84,8 +84,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Car")) {
             if (loseSound != null && audioSource != null) {
-            audioSource.PlayOneShot(loseSound);
-        }
+                audioSource.PlayOneShot(loseSound);
+            }
+
+            Destroy(GameObject.Find("Particle System"));
             Destroy(GameObject.FindGameObjectWithTag("Player"), loseSound != null ? loseSound.length : 0);
             loseText.gameObject.SetActive(true);
             gameOver = true;
