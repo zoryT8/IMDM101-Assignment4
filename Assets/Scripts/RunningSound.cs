@@ -18,7 +18,7 @@ public class AudioControl : MonoBehaviour
         {
             bool isGrounded = Mathf.Abs(player.position.y - 0.1225509f) < 0.001f;
 
-            if (isGrounded)
+            if (isGrounded && !PlayerController.gameOver)
             {
                 if (!audioSource.isPlaying)
                     audioSource.Play();
