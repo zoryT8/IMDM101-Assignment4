@@ -141,8 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7798fa0a368f3f4a8701acfee149914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  player: {fileID: 0}
 --- !u!114 &5710339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e, type: 3}
       propertyPath: m_Name
-      value: Van1
+      value: Van
       objectReference: {fileID: 0}
     - target: {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e, type: 3}
       propertyPath: m_TagString
@@ -1427,6 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5edaf30f64ea429de305b2280b90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseSound: {fileID: 0}
   constantRunSpeed: 10
   lateralSpeed: 10
   loseText: {fileID: 849075096}
