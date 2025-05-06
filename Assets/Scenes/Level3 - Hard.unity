@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: c82a334cf5a5e47978749c210cee72a7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -747,11 +747,11 @@ PrefabInstance:
     - target: {fileID: 6668675207182941987, guid: ded8ab79008e9ad43b9f1a692aaf22d8, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 5f5f04a0f0dc22d4785f3cfe4b343497, type: 3}
+      objectReference: {fileID: 8300000, guid: 41a989c5d838d2b40816517c2b9d4f34, type: 3}
     - target: {fileID: 6668675207182941987, guid: ded8ab79008e9ad43b9f1a692aaf22d8, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5f5f04a0f0dc22d4785f3cfe4b343497, type: 3}
+      objectReference: {fileID: 8300000, guid: 41a989c5d838d2b40816517c2b9d4f34, type: 3}
     - target: {fileID: 7194614792529497720, guid: ded8ab79008e9ad43b9f1a692aaf22d8, type: 3}
       propertyPath: m_Name
       value: ThemeMusic
@@ -1675,7 +1675,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7783019, g: 0.7783019, b: 0.7783019, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -1718,8 +1718,8 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_BounceIntensity: 2
+  m_ColorTemperature: 1655
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
