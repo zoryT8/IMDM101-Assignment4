@@ -17,7 +17,7 @@ public class CarController : MonoBehaviour
         if (sceneName.Equals("Level1 - Easy")) {
             drivingSpeed = new System.Random().Next(0, 10);
         } else if (sceneName.Equals("Level2 - Medium")) {
-            drivingSpeed = new System.Random().Next(5, 15);
+            drivingSpeed = new System.Random().Next(10, 20);
         } else if (sceneName.Equals("Level3 - Hard")) {
             drivingSpeed = new System.Random().Next(30, 50);
         }
