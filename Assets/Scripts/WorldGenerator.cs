@@ -24,6 +24,11 @@ public class WorldGenerator : MonoBehaviour
         
     }
 
+    public static void resetStaticFields() {
+        street = GameObject.Find("Street1");
+        counter = 1;
+    }
+
     public static void generateNewStreet() {
         if (counter > 1) {
             deleteOldStreet();

@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float jumpSpeed;
     public GameObject loseText;
     public TextMeshProUGUI scoreText;
+    public Button homeButton;
     private Rigidbody rb;
     private float movementX;
     private float movementY;
@@ -27,10 +29,12 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         loseText.SetActive(false);
+        homeButton.gameObject.SetActive(false);
         gameOver = false;
         audioSource = GetComponent<AudioSource>();
         onGround = true;
         score = 0;
+        WorldGenerator.resetStaticFields();
         WorldGenerator.startingCarRotation = GameObject.Find("Van").transform.rotation;
         WorldGenerator.startingCarY = GameObject.Find("Van").transform.position.y;
         String sceneName = SceneManager.GetActiveScene().name;
@@ -69,7 +73,7 @@ public class PlayerController : MonoBehaviour
                 rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpSpeed, 0);
                 onGround = false;
             }
-            StreetMover.speed += 0.01F;
+            StreetMover.speed += 0.01f;
         }
     }
 
@@ -90,6 +94,7 @@ public class PlayerController : MonoBehaviour
             Destroy(GameObject.Find("Particle System"));
             Destroy(GameObject.FindGameObjectWithTag("Player"), loseSound != null ? loseSound.length : 0);
             loseText.gameObject.SetActive(true);
+            homeButton.gameObject.SetActive(true);
             gameOver = true;
         }
     }
